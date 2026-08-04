@@ -14,6 +14,11 @@ collections:
         label: "Teks Halaman Utama"
         name: "content"
         fields:
+          - label: "Logo (kosongkan untuk pakai logo bawaan)"
+            name: "logo"
+            widget: "image"
+            required: false
+            hint: "Upload file PNG/JPG/SVG dengan background transparan untuk hasil terbaik"
           - label: "Kalimat kecil di atas judul (hero)"
             name: "heroEyebrow"
             widget: "string"
