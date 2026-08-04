@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dapur Emmak — Kue Kering Rumahan</title>
+<meta name="description" content="Kue kering rumahan asli buatan Dapur Emmak. Pesan langsung, terima di rumah.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="50" cy="50" r="39" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="1 4"/>
+        <g transform="translate(50,42)">
+          <line x1="-12" y1="0" x2="12" y2="0" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="-12" cy="0" r="3" fill="currentColor"/>
+          <circle cx="12" cy="0" r="3" fill="currentColor"/>
+        </g>
+        <g transform="translate(50,60)" fill="currentColor">
+          <path d="M0,-6 C2.5,-3.5 2.5,2 0,6 C-2.5,2 -2.5,-3.5 0,-6 Z"/>
+          <path d="M-9,-3.5 C-6.5,-1.5 -6.5,4 -9,8 C-11.5,4 -11.5,-1.5 -9,-3.5 Z" opacity="0.85"/>
+          <path d="M9,-3.5 C11.5,-1.5 11.5,4 9,8 C6.5,4 6.5,-1.5 9,-3.5 Z" opacity="0.85"/>
+        </g>
+      </svg>
+      <span class="brand-name">Dapur Emmak</span>
+    </a>
+    <nav class="header-nav">
+      <a href="#produk">Produk</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <button class="cart-btn" id="cartToggle" aria-label="Buka keranjang">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 4h2l2.2 11.2a1.6 1.6 0 001.6 1.3h8.4a1.6 1.6 0 001.6-1.3L21 8H6"/><circle cx="9" cy="20" r="1.3" fill="currentColor" stroke="none"/><circle cx="18" cy="20" r="1.3" fill="currentColor" stroke="none"/></svg>
+      <span id="cartCount" class="cart-count">0</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">Est. dapur rumahan &middot; homemade with love</p>
+      <h1>Kue kering yang rasanya masih seperti buatan emak di rumah.</h1>
+      <p class="hero-sub">Dari dapur kecil di rumah, sekarang bisa dipesan dan diantar untuk kamu yang kangen kue kering dengan resep asli, bukan pabrikan.</p>
+      <div class="hero-cta">
+        <a href="#produk" class="btn btn-primary">Lihat produk</a>
+        <a href="#kontak" class="btn btn-ghost">Hubungi kami</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="produk" class="section">
+    <div class="wrap">
+      <p class="section-eyebrow">Katalog</p>
+      <h2 class="section-title">Pilihan kue kering minggu ini</h2>
+      <div id="productGrid" class="product-grid"></div>
+    </div>
+  </section>
+
+  <section id="tentang" class="section section-alt">
+    <div class="wrap about-inner">
+      <div class="about-badge" aria-hidden="true">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="50" cy="50" r="39" fill="none" stroke="currentColor" stroke-width="0.5" stroke-dasharray="1 4"/>
+          <g transform="translate(50,42)">
+            <line x1="-12" y1="0" x2="12" y2="0" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="-12" cy="0" r="3" fill="currentColor"/>
+            <circle cx="12" cy="0" r="3" fill="currentColor"/>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <p class="section-eyebrow">Tentang kami</p>
+        <h2 class="section-title">Dibuat di dapur rumahan, satu per satu.</h2>
+        <p class="about-text">Dapur Emmak dimulai dari dapur rumah biasa, dibuat untuk tetangga dan kerabat yang selalu minta tambah. Sekarang kami ingin berbagi rasa yang sama ke lebih banyak orang — tanpa mengubah resep aslinya. Setiap toples dibuat dalam jumlah terbatas supaya kualitasnya tetap terjaga.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak" class="section">
+    <div class="wrap kontak-inner">
+      <div>
+        <p class="section-eyebrow">Kontak</p>
+        <h2 class="section-title">Ada pertanyaan sebelum pesan?</h2>
+        <p class="hero-sub">Chat kami langsung, kami balas secepatnya.</p>
+        <a id="waContactLink" href="#" target="_blank" rel="noopener" class="btn btn-primary">Chat via WhatsApp</a>
+      </div>
+      <ul class="kontak-list">
+        <li><span>Lokasi</span>Ganti dengan alamat / area pengambilan</li>
+        <li><span>Jam layanan</span>Ganti dengan jam operasional</li>
+        <li><span>Instagram</span>@dapuremmak</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span>&copy; <span id="year"></span> Dapur Emmak</span>
+    <span>Kue kering rumahan, dibuat dengan hati.</span>
+  </div>
+</footer>
+
+<div id="cartOverlay" class="cart-overlay"></div>
+<aside id="cartDrawer" class="cart-drawer" aria-label="Keranjang belanja">
+  <div class="cart-head">
+    <h3>Keranjang</h3>
+    <button id="cartClose" class="icon-btn" aria-label="Tutup keranjang">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    </button>
+  </div>
+  <div id="cartItems" class="cart-items"></div>
+  <div id="cartEmpty" class="cart-empty">Keranjang masih kosong. Yuk pilih kue favoritmu.</div>
+  <div class="cart-foot">
+    <div class="cart-total-row">
+      <span>Total</span>
+      <span id="cartTotal">Rp0</span>
+    </div>
+    <button id="checkoutBtn" class="btn btn-primary btn-block">Checkout</button>
+  </div>
+</aside>
+
+<div id="checkoutOverlay" class="cart-overlay"></div>
+<div id="checkoutModal" class="checkout-modal" role="dialog" aria-label="Checkout">
+  <div class="checkout-card">
+    <div class="cart-head">
+      <h3>Selesaikan pesanan</h3>
+      <button id="checkoutClose" class="icon-btn" aria-label="Tutup">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+
+    <div id="checkoutSummary" class="checkout-summary"></div>
+    <div class="checkout-total-row">
+      <span>Total pesanan</span>
+      <span id="checkoutTotal">Rp0</span>
+    </div>
+
+    <div class="checkout-step">
+      <p class="checkout-step-label">1. Isi data pengiriman</p>
+      <div class="form-grid">
+        <input type="text" id="custName" placeholder="Nama penerima">
+        <input type="tel" id="custPhone" placeholder="No. HP aktif">
+        <textarea id="custAddress" placeholder="Alamat pengiriman / catatan pengambilan" rows="2"></textarea>
+      </div>
+    </div>
+
+    <div class="checkout-step">
+      <p class="checkout-step-label">2. Scan &amp; bayar QRIS</p>
+      <div class="qris-box">
+        <div class="qris-placeholder">
+          <svg viewBox="0 0 100 100" width="88" height="88" aria-hidden="true">
+            <rect x="8" y="8" width="28" height="28" fill="none" stroke="currentColor" stroke-width="3"/>
+            <rect x="16" y="16" width="12" height="12" fill="currentColor"/>
+            <rect x="64" y="8" width="28" height="28" fill="none" stroke="currentColor" stroke-width="3"/>
+            <rect x="72" y="16" width="12" height="12" fill="currentColor"/>
+            <rect x="8" y="64" width="28" height="28" fill="none" stroke="currentColor" stroke-width="3"/>
+            <rect x="16" y="72" width="12" height="12" fill="currentColor"/>
+            <rect x="46" y="8" width="6" height="6" fill="currentColor"/>
+            <rect x="46" y="20" width="6" height="6" fill="currentColor"/>
+            <rect x="58" y="46" width="6" height="6" fill="currentColor"/>
+            <rect x="46" y="46" width="6" height="6" fill="currentColor"/>
+            <rect x="70" y="46" width="6" height="6" fill="currentColor"/>
+            <rect x="46" y="58" width="6" height="6" fill="currentColor"/>
+            <rect x="46" y="70" width="6" height="6" fill="currentColor"/>
+            <rect x="58" y="70" width="6" height="6" fill="currentColor"/>
+            <rect x="70" y="58" width="6" height="6" fill="currentColor"/>
+            <rect x="82" y="70" width="6" height="6" fill="currentColor"/>
+            <rect x="82" y="82" width="6" height="6" fill="currentColor"/>
+            <rect x="58" y="82" width="6" height="6" fill="currentColor"/>
+          </svg>
+          <p>Ganti dengan gambar QRIS asli</p>
+        </div>
+        <p class="qris-note">Scan pakai GoPay, DANA, ShopeePay, m-banking, atau e-wallet lain yang mendukung QRIS.</p>
+      </div>
+    </div>
+
+    <div class="checkout-step">
+      <p class="checkout-step-label">3. Konfirmasi pesanan</p>
+      <p class="checkout-note">Setelah transfer, kirim bukti pembayaran lewat WhatsApp supaya pesanan segera kami proses.</p>
+      <a id="waCheckoutLink" href="#" target="_blank" rel="noopener" class="btn btn-primary btn-block">Kirim pesanan via WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+
+<!-- Dipakai untuk proses login/undangan panel admin (/admin). Aman ditinggal di sini. -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; });
+      }
+    });
+  }
+</script>
+</body>
+</html>
