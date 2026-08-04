@@ -187,6 +187,20 @@
     set("contactAddress", c.address);
     set("contactHours", c.hours);
     set("contactInstagram", c.instagram);
+
+    if (c.logo) {
+      const showLogo = (imgId, svgId) => {
+        const img = document.getElementById(imgId);
+        const svg = document.getElementById(svgId);
+        if (img && svg) {
+          img.src = c.logo;
+          img.style.display = "block";
+          svg.style.display = "none";
+        }
+      };
+      showLogo("logoImgHeader", "logoSvgHeader");
+      showLogo("logoImgAbout", "logoSvgAbout");
+    }
   }
 
   // ---------- Init ----------
