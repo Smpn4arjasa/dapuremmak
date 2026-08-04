@@ -1,0 +1,53 @@
+{
+  "whatsapp": "6281234567890",
+  "items": [
+    {
+      "id": "selai-nanas",
+      "name": "Kue Selai Nanas",
+      "price": 45000,
+      "unit": "toples 250 gr",
+      "desc": "Kulit lembut dengan selai nanas homemade, manis asam pas.",
+      "image": ""
+    },
+    {
+      "id": "kue-bawang",
+      "name": "Kue Bawang",
+      "price": 35000,
+      "unit": "toples 250 gr",
+      "desc": "Gurih renyah, favorit teman minum teh sore.",
+      "image": ""
+    },
+    {
+      "id": "kue-kacang",
+      "name": "Kue Kacang",
+      "price": 38000,
+      "unit": "toples 250 gr",
+      "desc": "Kacang tanah pilihan, lumer di mulut.",
+      "image": ""
+    },
+    {
+      "id": "kue-coklat",
+      "name": "Kue Coklat",
+      "price": 40000,
+      "unit": "toples 250 gr",
+      "desc": "Untuk pecinta coklat, tidak terlalu manis.",
+      "image": ""
+    },
+    {
+      "id": "putri-salju",
+      "name": "Putri Salju",
+      "price": 42000,
+      "unit": "toples 250 gr",
+      "desc": "Lembut dan lumer, taburan gula halus melimpah.",
+      "image": ""
+    },
+    {
+      "id": "sagu-keju",
+      "name": "Kue Sagu Keju",
+      "price": 40000,
+      "unit": "toples 250 gr",
+      "desc": "Renyah ringan dengan keju asli, tidak eneg.",
+      "image": ""
+    }
+  ]
+}
