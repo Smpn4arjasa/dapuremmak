@@ -140,7 +140,7 @@
 
   function updateWaLinks(){
     const base = `https://wa.me/${STORE_WHATSAPP}`;
-    document.getElementById("waContactLink").href = `${base}?text=${encodeURIComponent("Halo Dapur Emmak, saya mau tanya-tanya soal kue kering.")}`;
+    document.getElementById("waContactLink").href = `${base}?text=${encodeURIComponent(waContactMessage)}`;
     document.getElementById("waCheckoutLink").href = `${base}?text=${encodeURIComponent(buildWhatsAppMessage())}`;
   }
 
@@ -177,21 +177,41 @@
     document.getElementById(id).addEventListener("input", updateWaLinks);
   });
 
+  function renderContent(c){
+    const set = (id, val) => { const el = document.getElementById(id); if (el && val) el.textContent = val; };
+    set("heroEyebrow", c.heroEyebrow);
+    set("heroTitle", c.heroTitle);
+    set("heroSub", c.heroSub);
+    set("aboutTitle", c.aboutTitle);
+    set("aboutText", c.aboutText);
+    set("contactAddress", c.address);
+    set("contactHours", c.hours);
+    set("contactInstagram", c.instagram);
+  }
+
   // ---------- Init ----------
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  fetch("products.json")
-    .then(res => res.json())
-    .then(data => {
-      PRODUCTS = data.items || [];
-      STORE_WHATSAPP = data.whatsapp || "";
-      renderProducts();
-      renderCart();
-      updateWaLinks();
-    })
-    .catch(() => {
+  let waContactMessage = "Halo Dapur Emmak, saya mau tanya-tanya soal kue kering.";
+
+  Promise.all([
+    fetch("products.json").then(res => res.json()).catch(() => null),
+    fetch("content.json").then(res => res.json()).catch(() => null)
+  ]).then(([productsData, contentData]) => {
+    if (productsData) {
+      PRODUCTS = productsData.items || [];
+      STORE_WHATSAPP = productsData.whatsapp || "";
+    } else {
       document.getElementById("productGrid").innerHTML =
         "<p style='color:var(--ink-soft)'>Produk belum bisa dimuat. Coba refresh halaman.</p>";
-    });
+    }
+    if (contentData) {
+      renderContent(contentData);
+      if (contentData.waContactMessage) waContactMessage = contentData.waContactMessage;
+    }
+    renderProducts();
+    renderCart();
+    updateWaLinks();
+  });
 
 })();
