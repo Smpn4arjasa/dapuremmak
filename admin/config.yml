@@ -1,0 +1,46 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Tempat foto yang diupload dari panel admin akan disimpan
+media_folder: "assets"
+public_folder: "assets"
+
+collections:
+  - name: "products"
+    label: "Produk & Kontak"
+    files:
+      - file: "products.json"
+        label: "Kelola Produk"
+        name: "products"
+        fields:
+          - label: "Nomor WhatsApp Toko"
+            name: "whatsapp"
+            widget: "string"
+            hint: "Format: 62 lalu nomor tanpa 0 di depan, contoh 6281234567890"
+          - label: "Daftar Produk"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.name}} — Rp{{fields.price}}"
+            fields:
+              - label: "ID (unik, huruf kecil, tanpa spasi)"
+                name: "id"
+                widget: "string"
+              - label: "Nama Produk"
+                name: "name"
+                widget: "string"
+              - label: "Harga (angka saja)"
+                name: "price"
+                widget: "number"
+                value_type: "int"
+              - label: "Satuan"
+                name: "unit"
+                widget: "string"
+                default: "toples 250 gr"
+              - label: "Deskripsi Singkat"
+                name: "desc"
+                widget: "text"
+              - label: "Foto Produk"
+                name: "image"
+                widget: "image"
+                required: false
