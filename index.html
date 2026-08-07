@@ -99,7 +99,7 @@
       <ul class="kontak-list">
         <li><span>Lokasi</span><span id="contactAddress">Ganti dengan alamat / area pengambilan</span></li>
         <li><span>Jam layanan</span><span id="contactHours">Ganti dengan jam operasional</span></li>
-        <li><span>Instagram</span><span id="contactInstagram">@dapuremmak</span></li>
+        <li><span>Instagram</span><a id="contactInstagram" href="#" target="_blank" rel="noopener">@dapuremmak</a></li>
       </ul>
     </div>
   </section>
@@ -160,7 +160,8 @@
     <div class="checkout-step">
       <p class="checkout-step-label">2. Scan &amp; bayar QRIS</p>
       <div class="qris-box">
-        <div class="qris-placeholder">
+        <img id="qrisImg" alt="Kode QRIS Dapur Emmak" style="display:none;width:180px;height:180px;object-fit:contain;background:#fff;border-radius:12px;padding:10px;border:1px solid var(--line);">
+        <div id="qrisPlaceholder" class="qris-placeholder">
           <svg viewBox="0 0 100 100" width="88" height="88" aria-hidden="true">
             <rect x="8" y="8" width="28" height="28" fill="none" stroke="currentColor" stroke-width="3"/>
             <rect x="16" y="16" width="12" height="12" fill="currentColor"/>
