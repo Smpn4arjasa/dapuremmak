@@ -4,10 +4,10 @@
     {
       "id": "selai-nanas",
       "name": "Kue Selai Nanas",
-      "price": 45000,
-      "unit": "toples 250 gr",
+      "price": 50000,
+      "unit": "toples 500gr",
       "desc": "Kulit lembut dengan selai nanas homemade, manis asam pas.",
-      "image": ""
+      "image": "assets/641fba0f6d79f.jpg"
     },
     {
       "id": "kue-bawang",
