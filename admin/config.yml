@@ -19,6 +19,11 @@ collections:
             widget: "image"
             required: false
             hint: "Upload file PNG/JPG/SVG dengan background transparan untuk hasil terbaik"
+          - label: "Kode QRIS untuk pembayaran"
+            name: "qrisImage"
+            widget: "image"
+            required: false
+            hint: "Upload foto/screenshot kode QRIS asli dari GoPay/DANA/m-banking. Kosongkan untuk tetap pakai contoh placeholder."
           - label: "Kalimat kecil di atas judul (hero)"
             name: "heroEyebrow"
             widget: "string"
