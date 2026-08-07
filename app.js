@@ -187,6 +187,20 @@
     set("contactAddress", c.address);
     set("contactHours", c.hours);
     set("contactInstagram", c.instagram);
+    if (c.instagram) {
+      const igLink = document.getElementById("contactInstagram");
+      if (igLink) igLink.href = `https://instagram.com/${c.instagram.replace(/^@/, "")}`;
+    }
+
+    if (c.qrisImage) {
+      const qrisImg = document.getElementById("qrisImg");
+      const qrisPlaceholder = document.getElementById("qrisPlaceholder");
+      if (qrisImg && qrisPlaceholder) {
+        qrisImg.src = c.qrisImage;
+        qrisImg.style.display = "block";
+        qrisPlaceholder.style.display = "none";
+      }
+    }
 
     if (c.logo) {
       const showLogo = (imgId, svgId) => {
